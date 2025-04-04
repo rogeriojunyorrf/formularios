@@ -16,12 +16,138 @@
       <ion-input label="Email:" type="email" placeholder="Digite seu email"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-input label="Number" type="tel" placeholder="Digite seu número"></ion-input>
-    </ion-item>
-    <ion-range labelPlacement="start" label="Seu número favorito"></ion-range>
-    <ion-range labelPlacement="end" label="Nota na última etapa"></ion-range>
-    <ion-range labelPlacement="fixed" label="Idade"></ion-range>
-    <ion-range labelPlacement="stacked" label="Satisfação"></ion-range>
+    <br>
+
+    <ion-list>
+      <ion-item><ion-input label="Nome completo" placeholder="Digite seu nome"></ion-input></ion-item>
+      <ion-item><ion-input label="E-mail" labelPlacement="fixed" placeholder="exemplo@email.com"
+          type="email"></ion-input></ion-item>
+      <ion-item><ion-input label="Telefone" labelPlacement="stacked" placeholder="(DDD) 00000-0000"
+          type="tel"></ion-input></ion-item>
+      <ion-item><ion-input label="Senha" labelPlacement="floating" placeholder="Digite uma senha"
+          type="password"></ion-input></ion-item>
+    </ion-list>
+
+    <br>
+
+    <ion-list>
+      <ion-item><ion-input labelPlacement="floating" value="usuario@exemplo.com">
+          <div slot="label">E-mail de contato <ion-text color="danger">(Obrigatório)</ion-text></div>
+        </ion-input></ion-item>
+    </ion-list>
+
+    <br>
+
+    <ion-list>
+      <ion-item><ion-input aria-label="E-mail corporativo" value="funcionario@empresa.com"></ion-input></ion-item>
+    </ion-list>
+
+    <br>
+
+    <ion-list>
+      <ion-item><ion-input label="Usuário" labelPlacement="stacked" [clearInput]="true"
+          placeholder="Digite seu nome de usuário" value="jose.silva"></ion-input></ion-item>
+      <ion-item><ion-input label="E-mail de acesso" labelPlacement="stacked" [clearOnEdit]="true"
+          placeholder="Digite seu e-mail corporativo"></ion-input></ion-item>
+      <ion-item><ion-input label="Senha de acesso" labelPlacement="stacked" type="password"
+          placeholder="Digite sua senha"></ion-input></ion-item>
+    </ion-list>
+
+    <br>
+
+    <ion-input label="Nome do produto" label-placement="floating" fill="solid"
+      placeholder="Ex: Camiseta básica"></ion-input>
+    <ion-input label="Código de barras" label-placement="floating" fill="outline"
+      placeholder="Digite ou escaneie o código"></ion-input>
+
+    <br>
+
+    <ion-input type="email" fill="solid" label="Seu e-mail" labelPlacement="floating" helperText="Digite um e-mail válido para receber novidades" errorText="E-mail inválido" ngModel email></ion-input>
+
+    <br>
+
+    <ion-list>
+      <ion-item><ion-input label="Título da ideia" placeholder="Digite um nome para sua ideia"></ion-input></ion-item>
+      <div class="ion-padding-start"><ion-input label="Resumo curto" [counter]="true" maxlength="20" placeholder="Máx. 20 caracteres"></ion-input></div>
+    </ion-list>
+
+    <br>
+
+    <ion-list>
+      <ion-item>
+        <ion-input labelPlacement="stacked" label="E-mail de acesso" placeholder="usuario@empresa.com">
+          <ion-icon slot="start" name="mail" aria-hidden="true"></ion-icon>
+          <ion-button fill="clear" slot="end" aria-label="Mostrar/ocultar senha">
+            <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+          </ion-button>
+        </ion-input>
+      </ion-item>
+    </ion-list>    
+
+    <br>
+
+    <ion-input aria-label="Nome completo" color="primary" placeholder="Digite seu nome completo"></ion-input>
+    <ion-input aria-label="Nome de usuário" color="secondary" placeholder="Ex: junior_dev42"></ion-input>
+    <ion-input aria-label="Departamento" color="tertiary" placeholder="Ex: Marketing, TI, RH..."></ion-input>
+    <ion-input aria-label="E-mail de recuperação" color="success" placeholder="exemplo@dominio.com"></ion-input>
+    <ion-input aria-label="Telefone de emergência" color="warning" placeholder="(DDD) 00000-0000"></ion-input>
+    <ion-input aria-label="Senha atual" color="danger" placeholder="Digite sua senha atual"></ion-input>
+    <ion-input aria-label="Tema preferido" color="light" placeholder="Claro, Escuro, Sistema..."></ion-input>
+    <ion-input aria-label="Idioma do sistema" color="medium" placeholder="Português, Inglês..."></ion-input>
+    <ion-input aria-label="Código de autenticação" color="dark" placeholder="6 dígitos de verificação"></ion-input>
+    
+    <br>
+
+    <ion-input aria-label="Identificador personalizado" placeholder="Ex: meu-id-123" class="custom" helperText="Use letras, números ou hífens" [counter]="true" [maxlength]="20"></ion-input>
+
+    <br>
+
+    <ion-range labelPlacement="start" label="Volume de notificações"></ion-range>
+
+    <ion-range labelPlacement="end" label="Brilho da tela"></ion-range>
+
+    <ion-range labelPlacement="fixed" label="Tamanho do texto"></ion-range>
+
+    <ion-range labelPlacement="stacked" label="Sensibilidade do toque"></ion-range>
+
+    <br>
+
+    <ion-range>
+      <div slot="label">Temperatura desejada: <ion-text color="primary">ajuste com cuidado</ion-text></div>
+    </ion-range>
+    
+    <br>
+
+    <ion-range aria-label="Volume de chamadas"></ion-range>
+
+    <br>
+
+    <ion-range aria-label="Temperatura ambiente">
+      <ion-icon slot="start" name="snow-outline"></ion-icon>
+      <ion-icon slot="end" name="sunny-outline"></ion-icon>
+    </ion-range>
+    
+    <br>
+
+    <ion-range aria-label="Dual Knobs Range" [dualKnobs]="true" [value]="{ lower: 20, upper: 80 }"></ion-range>
+
+    <br>
+
+    <ion-range aria-label="Nível de dificuldade" [ticks]="true" [snaps]="true" [min]="0" [max]="10"></ion-range>
+
+    <br>
+
+    <ion-range aria-label="Nível de bateria" [value]="50" [pin]="true"></ion-range>
+
+    <ion-range
+    aria-label="Custom range"
+    [min]="0"
+    [max]="10"
+    [value]="5"
+    [pin]="true"
+    [ticks]="true"
+    [snaps]="true"
+  ></ion-range>
+
   </ion-list>
 </ion-list>
